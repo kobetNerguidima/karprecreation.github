@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Panier - KARPE CRÉATION</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    /* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #fff;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 50px; /* Adjust as needed */
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Example hover color */
+}
+
+/* Main Content Styling */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.cart-summary h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Cart Items Styling */
+.cart-items {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-details h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.item-details p {
+    margin: 5px 0;
+    color: #777;
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.item-quantity input[type="number"] {
+    width: 60px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.remove-item {
+    background-color: #dc3545; /* Red color for remove button */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-item:hover {
+    background-color: #c82333;
+}
+
+.item-total {
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Cart Totals Styling */
+.cart-totals {
+    text-align: right;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.cart-totals p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.cart-totals .grand-total {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Cart Actions Styling */
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.btn-secondary,
+.btn-primary {
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    flex: 1; /* Make buttons take equal width */
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Gray color */
+    color: white;
+    border: 1px solid #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Blue color */
+    color: white;
+    border: 1px solid #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.social-media img {
+    height: 30px; /* Adjust icon size */
+    width: 30px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .item-details {
+        width: 100%;
+    }
+
+    .cart-actions {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-item img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .item-quantity input[type="number"] {
+        width: 50px;
+    }
+}
+</style>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="q.jpg" alt="Logo KARPE CRÉATION">
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="produits.html">Nos Produits</a></li>
+                <li><a href="panier.html">Panier</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart-summary">
+            <h1>Votre Panier</h1>
+            <div class="cart-items">
+                <div class="cart-item">
+                    <img src="OIP (1).webp" alt="Produit 1">
+                    <div class="item-details">
+                        <h3>Nom du Produit 1</h3>
+                        <p>Prix unitaire: 20000fcfa</p>
+                        <div class="item-quantity">
+                            <label for="qty1">Quantité:</label>
+                            <input type="number" id="qty1" value="1" min="10" data-item-id="1">
+                            <button class="remove-item">Supprimer</button>
+                        </div>
+                        <p class="item-total">Total: 20000fcfa</p>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <img src="o.jpg" alt="Produit Star 2">
+                    <div class="item-details">
+                        <h3>Nom du Produit Star 2</h3>
+                        <p>1500cfa</p>
+                        <div class="item-quantity">
+                            <label for="qty2">Quantité:</label>
+                            <input type="number" id="qty2" value="2" min="10" data-item-id="2">
+                            <button class="remove-item">Supprimer</button>
+                        </div>
+                        <p class="item-total">Total:</p>
+                    </div>
+                </div>
+                </div>
+                  <div class="cart-item">
+                    <img src="j.jpg" alt="Produit Star 3">
+                    <div class="item-details">
+                        <h3>Nom du Produit Star 3</h3>
+                        <p>1500cfa</p>
+                        <div class="item-quantity">
+                            <label for="qty2">Quantité:</label>
+                            <input type="number" id="qty3" value="3" min="10" data-item-id="3">
+                            <button class="remove-item">Supprimer</button>
+                        </div>
+                        <p class="item-total">Total:</p>
+                    </div>
+                </div>
+                </div>
+
+            <div class="cart-totals">
+                <p>Sous-total: <span id="subtotal">fcfa</span></p>
+                <p>Livraison: <span id="shipping">fcfa</span></p>
+                <p class="grand-total">Total à payer: <span id="grandTotal">cfa</span></p>
+            </div>
+
+            <div class="cart-actions">
+                <a href="produits.html" class="btn-secondary">Continuer mes achats</a>
+                <button class="btn-primary" id="checkout-btn">Passer à la caisse</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 KARPE CRÉATION. Tous droits réservés.</p>
+            <div class="social-media">
+               <a href="https://www.facebook.com/Chancy Kodongo" target="_blank">
+                  <img src="p.webp" alt="Facebook Profile">
+              </a>
+                <a href="https://wa.me/+2250700823938" target="_blank"><img src="t.webp" alt="WhatsApp"></a>
+
+                </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

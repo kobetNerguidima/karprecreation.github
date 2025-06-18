@@ -1,0 +1,700 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #7ff785;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    max-height: 50px;
+    width: auto;
+    vertical-align: middle;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e67e22; 
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 15px;
+}
+
+.btn-primary {
+   background-color: #e67e22; 
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #d35400; 
+}
+
+.btn-secondary {
+    background-color: #f4f4f4;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.btn-secondary:hover {
+    background-color: #e0e0e0;
+}
+
+.hero-banner {
+    background: url('../images/banniere-karpe-creation.jpg') no-repeat center center/cover; 
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.hero-banner .banner-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.hero-banner h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #e67e22; 
+}
+
+.hero-banner p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+.about-us-preview {
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 30px;
+}
+
+.about-us-preview h2 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 400px; 
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-content p {
+    flex: 1; 
+    text-align: left;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    font-size: 1.5rem;
+    color: #e67e22;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-card .short-description {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.btn-product-detail, .add-to-cart-btn {
+    display: block; 
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.add-to-cart-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #218838;
+}
+
+.products-listing h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.filters {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.filters input, .filters select, .filters button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.filters button {
+    background-color: #3498db; /* Bleu pour les filtres */
+    color: white;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background-color: #2980b9;
+}
+
+/* --- Section Panier (cart.html) --- */
+.cart-summary h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.cart-items {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+    border-bottom: none; /* Pas de bordure pour le dernier élément */
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-item .item-details {
+    flex: 1;
+}
+
+.cart-item h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.3rem;
+    color: #2c3e50;
+}
+
+.cart-item .item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.cart-item .item-quantity input[type="number"] {
+    width: 60px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.cart-item .remove-item {
+    background-color: #e74c3c; /* Rouge pour supprimer */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item .remove-item:hover {
+    background-color: #c0392b;
+}
+
+.cart-item .item-total {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.cart-totals {
+    text-align: right;
+    padding: 20px;
+    border-top: 1px solid #eee;
+    margin-top: 20px;
+}
+
+.cart-totals p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.cart-totals .grand-total {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e67e22;
+    margin-top: 20px;
+}
+
+.cart-actions {
+    text-align: right;
+    margin-top: 30px;
+}
+
+.cart-actions .btn-secondary {
+    margin-right: 15px;
+}
+
+/* --- Section Contact (contact.html) --- */
+.contact-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.contact-form {
+    flex: 2; /* Prend plus d'espace */
+    min-width: 300px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 22px); /* Prend presque toute la largeur avec padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical; /* Permet de redimensionner verticalement */
+}
+
+.contact-info {
+    flex: 1; /* Prend moins d'espace */
+    min-width: 250px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    text-align: left; /* Annule le text-align center de la section */
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* Styles pour le footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 30px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Pour la réactivité */
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    transition: transform 0.2s ease;
+}
+
+.social-media img:hover {
+    transform: translateY(-3px);
+}
+
+
+/* --- Responsive Design (Média Queries) --- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    .hero-banner {
+        padding: 60px 15px;
+    }
+
+    .hero-banner h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-banner p {
+        font-size: 1rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-content p {
+        text-align: center;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cart-item img {
+        margin-bottom: 10px;
+    }
+
+    .cart-item .item-details {
+        width: 100%;
+    }
+
+    .cart-item .item-quantity {
+        justify-content: center;
+    }
+
+    .cart-totals {
+        text-align: center;
+    }
+
+    .cart-actions {
+        text-align: center;
+    }
+
+    .cart-actions .btn-secondary {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .social-media {
+        margin-top: 10px;
+    }
+}
+/* --- Styles pour les éléments fixes (Header et Footer) --- */
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center; /* Garder ou ajuster selon votre mise en page Flexbox */
+
+    /* NOUVEAU: Rend le header fixe en haut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Assure que le header est au-dessus des autres éléments */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Un peu d'ombre pour le faire ressortir */
+}
+
+//*footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    /* margin-top: 30px; Supprimez cette marge car le footer sera fixe */
+
+    /* NOUVEAU: Rend le footer fixe en bas */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Assure que le footer est au-dessus des autres éléments */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2); /* Ombre pour le faire ressortir */
+}*//
+
+/* --- Styles pour le corps et le contenu principal --- */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    height: 100vh; /* NOUVEAU: Prend 100% de la hauteur de la fenêtre */
+    overflow: hidden; /* NOUVEAU: Empêche le défilement global du body */
+    display: flex; /* NOUVEAU: Utilise flexbox pour organiser les sections */
+    flex-direction: column; /* NOUVEAU: Empile les sections verticalement */
+}
+
+main {
+    /* padding: 20px; Déplacé et ajusté ci-dessous */
+    max-width: 1200px;
+    margin: 0 auto; /* NOUVEAU: Garde le main centré */
+    background-color: white; /* Garder le fond blanc pour le contenu principal */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+    /* NOUVEAU: Gère l'espace pour les éléments fixes et le défilement du contenu */
+    flex-grow: 1; /* Permet au main de prendre l'espace disponible */
+    overflow-y: auto; /* Permet le défilement VERTICAL à l'intérieur du main */
+    -webkit-overflow-scrolling: touch; /* Améliore le défilement sur les appareils iOS */
+
+    /* Ajoutez un padding pour que le contenu ne soit pas caché par le header/footer */
+    padding-top: 80px; /* Ajustez cette valeur à la hauteur de votre header */
+    padding-bottom: 80px; /* Ajustez cette valeur à la hauteur de votre footer */
+    padding-left: 20px; /* Gardez le padding horizontal existant */
+    padding-right: 20px; /* Gardez le padding horizontal existant */
+
+    width: 100%; /* S'assurer qu'il prend la largeur disponible */
+    box-sizing: border-box; /* Inclut le padding dans la largeur/hauteur */
+}
+
+/* --- Ajustements pour la navigation (déjà en flexbox) --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 70px; /* NOUVEAU: Définissez une hauteur fixe pour le header pour un padding plus précis */
+    box-sizing: border-box; /* Inclut le padding dans la hauteur */
+}
+
+/* Vous devrez peut-être ajuster la hauteur du logo si elle dépasse la hauteur du header */
+.logo img {
+    max-height: 100px; /* Ajustez si votre logo est plus grand */
+    width: auto;
+    vertical-align: middle;
+}
+
+
+/* --- Media Queries (pour les petits écrans) --- */
+/* Il est important d'ajuster les paddings pour la réactivité */
+@media (max-width: 768px) {
+    /* Ajustez la hauteur du header sur mobile si elle change */
+    header {
+        height: auto; /* Laissez la hauteur s'adapter sur mobile */
+        padding: 10px 0;
+    }
+    nav {
+        flex-direction: column;
+        height: auto; /* Laisser la nav s'adapter */
+        padding: 10px;
+    }
+    nav ul {
+        margin-top: 10px;
+    }
+
+    main {
+        /* Ajustez ces paddings en fonction de la hauteur réelle de votre header/footer sur mobile */
+        padding-top: 120px; /* Peut-être plus haut si la nav s'étend sur plusieurs lignes */
+        padding-bottom: 80px; /* Ajustez si votre footer est plus haut sur mobile */
+    }
+}
+
+/* Le reste de votre CSS pour les sections, cartes produits, etc. */
+/* Ne modifiez pas les styles de .hero-banner, .about-us-preview, .product-grid, .contact-section, etc.
+   à moins que ce ne soit pour des raisons de design propres.
+   Ils devraient défiler normalement à l'intérieur du `main`. */
+   /* Styles pour la section média du produit (qui contient la vidéo ou l'image) */
+.product-media {
+    flex: 1; /* Permet à la vidéo de prendre une part de l'espace dans une mise en page flex */
+    min-width: 280px; /* Taille minimale pour ne pas être trop petite sur mobile */
+    max-width: 450px; /* <--- RÉDUISEZ CETTE VALEUR POUR DIMINUER LA TAILLE MAXIMALE */
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* margin: 0 auto;  Si vous voulez la centrer dans son propre conteneur lorsque flex n'est pas utilisé sur le parent */
+}
+
+.product-media .product-video {
+    width: 100%; /* La vidéo prend 100% de la largeur de son conteneur (.product-media) */
+    height: auto; /* Maintient les proportions */
+    display: block;
+}
+
+/* Votre section .product-detail qui contient .product-media et .product-info */
+.product-detail {
+    display: flex;
+    flex-wrap: wrap; /* Permet le retour à la ligne sur les petits écrans */
+    gap: 30px; /* Espace entre la vidéo et les infos produit */
+    padding: 20px;
+    justify-content: center; /* Centre les éléments si l'espace le permet */
+    align-items: flex-start; /* Aligne les éléments en haut */
+}
+
+/* Le reste de votre CSS... */
